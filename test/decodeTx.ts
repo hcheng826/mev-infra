@@ -1,8 +1,8 @@
 import { ethers } from 'ethers';
-import yieldYakAbi from '../abi/yieldYak.abi.json';
-import yetiTroveManagerAbi from '../abi/yetiTroveManager.abi.json';
-import sampleYieldYakReinvestTx from '../sampleData/sampleYieldYakReinvestTx.json';
-import sampleYetiLiquidateTx from '../sampleData/sampleYetiLiquidateTx.json';
+import yieldYakAbi from './abi/yieldYak.abi.json';
+import yetiTroveManagerAbi from './abi/yetiTroveManager.abi.json';
+import sampleYieldYakReinvestTx from './sampleData/sampleYieldYakReinvestTx.json';
+import sampleYetiLiquidateTx from './sampleData/sampleYetiLiquidateTx.json';
 
 const iface = new ethers.utils.Interface(yieldYakAbi);
 
