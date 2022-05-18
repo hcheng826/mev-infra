@@ -8,7 +8,7 @@ const iface = new ethers.utils.Interface(yieldYakAbi);
 
 const reinvestTxDescription = iface.parseTransaction({
     data: sampleYieldYakReinvestTx.input,
-    value: sampleYieldYakReinvestTx.value
+    value: sampleYieldYakReinvestTx.value,
 });
 
 console.log(reinvestTxDescription);
@@ -17,7 +17,7 @@ const iface2 = new ethers.utils.Interface(yetiTroveManagerAbi);
 
 const liquidateTxDescription = iface2.parseTransaction({
     data: sampleYetiLiquidateTx.input,
-    value: sampleYetiLiquidateTx.value
+    value: sampleYetiLiquidateTx.value,
 });
 
 console.log(liquidateTxDescription);
