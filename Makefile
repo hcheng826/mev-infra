@@ -1,5 +1,6 @@
 build:
-	rm -rf dist/*
+	rm -rf dist
+	mkdir dist
 # npx tsc
 	cp src/* dist/
 	cp ./package*.json dist/

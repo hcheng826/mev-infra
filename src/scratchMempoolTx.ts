@@ -1,9 +1,10 @@
 import axios from 'axios';
-import { AVAX_RPC_URL } from './const';
+
+const AVAX_RPC_URL = 'http://13.113.39.140:11987/ext/bc/C/rpc';
 
 let requestId = 0;
 
-function scratchMempoolTx() {
+export function scratchMempoolTx() {
     const reqBody = {
         jsonrpc: '2.0',
         method: 'txpool_content',
@@ -21,4 +22,4 @@ function scratchMempoolTx() {
         });
 }
 
-setInterval(scratchMempoolTx, 100);
+// setInterval(scratchMempoolTx, 100);
