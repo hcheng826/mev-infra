@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const AVAX_RPC_URL = 'http://13.113.39.140:11987/ext/bc/C/rpc';
+const RPC_URL = process.env.RPC_URL;
 
 let requestId = 0;
 
@@ -12,7 +12,8 @@ export function scratchMempoolTx() {
     };
 
     axios
-        .post(AVAX_RPC_URL, reqBody)
+    // @ts-ignore
+        .post(RPC_URL, reqBody)
         .then((res) => {
             console.log(`statusCode: ${res.status}`);
             console.log(JSON.stringify(res.data, null, 2));
